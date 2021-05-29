@@ -142,7 +142,7 @@ class AssetThumbnail extends StatelessWidget {
       builder: (_, snapshot) {
         final bytes = snapshot.data;
         // If we have no data, display a spinner
-        if (bytes == null) return Container(width:MediaQuery.of(context).size.width/8,height: MediaQuery.of(context).size.width/8,child: CircularProgressIndicator());
+        if (bytes == null) return Container(width:20,height: 20,child: CircularProgressIndicator());
         // If there's data, display it as an image
         return InkWell(
           onTap: () {
@@ -197,7 +197,7 @@ class ImageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black,
+      color: Colors.white,
       alignment: Alignment.center,
       child: FutureBuilder<File>(
         future: imageFile,
